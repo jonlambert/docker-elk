@@ -29,8 +29,6 @@ services:
         hard: -1
     ports:
       - 9200:9200
-    volumes:
-      - ./elasticsearch/storage:/usr/share/elasticsearch/data
   kibana:
     build: ./kibana
     depends_on:
