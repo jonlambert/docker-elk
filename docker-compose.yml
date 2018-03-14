@@ -9,7 +9,8 @@ services:
       - 80:8080
       - 443:8080
     volumes:
-      - /etc/apache2/.htpasswd:/etc/apache2/.htpasswd
+      - ./nginx/security/htpasswd:/etc/apache2/.htpasswd
+      - ./nginx/certs:/etc/nginx/certs
   logstash:
     build: ./logstash
     depends_on:
